@@ -14,14 +14,20 @@ export const presenterGraphviz = <T>(
   graph: IGraph<T>,
   graphName: string = "G",
 ): string => {
-  const vertices = graph.vertices();
-
   const isUndirected = graph instanceof UndirectedGraph;
   const type = isUndirected ? "graph" : "digraph";
   const connector = isUndirected ? "--" : "->";
 
   const lines: string[] = [];
+
   lines.push(`${type} ${graphName} {`);
+  lines.push(`  rankdir=LR;`);
+  lines.push(
+    `  node [shape=circle, fontname="Arial", style=filled, fillcolor="#f9f9f9"];`,
+  );
+  lines.push(`  edge [fontname="Arial", fontsize=10];`);
+
+  const vertices = graph.vertices();
 
   vertices.forEach((vertex) => {
     lines.push(`  "${vertex}";`);
@@ -33,16 +39,25 @@ export const presenterGraphviz = <T>(
     const neighbors = graph.getVertexNeighbors(from);
 
     neighbors.forEach((to) => {
-      if (isUndirected) {
-        const edgeKey = [String(from), String(to)].sort().join("_");
-        if (visitedEdges.has(edgeKey)) return;
-        visitedEdges.add(edgeKey);
-      }
+      const edgeKey = isUndirected
+        ? [String(from), String(to)].sort().join("_")
+        : `${from}_${to}`;
+
+      if (visitedEdges.has(edgeKey)) return;
+      visitedEdges.add(edgeKey);
 
       const weight = graph.getEdgeWeight(from, to);
-      const label = weight !== 0 ? ` [label="${weight}"]` : "";
+      const attributes: string[] = [];
 
-      lines.push(`  "${from}" ${connector} "${to}"${label};`);
+      if (weight !== 0) {
+        attributes.push(`label="${weight}"`);
+      }
+
+      attributes.push(`color="#333333"`);
+
+      const attrString =
+        attributes.length > 0 ? ` [${attributes.join(", ")}]` : "";
+      lines.push(`  "${from}" ${connector} "${to}"${attrString};`);
     });
   });
 

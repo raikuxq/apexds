@@ -15,10 +15,14 @@ describe("Graph Presenter Graphviz", () => {
       const createCleanGraph = <T>(): IGraph<T> =>
         isDirected ? new DirectedGraph<T>() : new UndirectedGraph<T>();
 
-      it("should render correct header and empty structure", () => {
+      it("should render correct header, global styles and empty structure", () => {
         const graph = createCleanGraph<string>();
         const dot = presenterGraphviz(graph);
+
         expect(dot).toContain(expectedHeader);
+        expect(dot).toContain("rankdir=LR;");
+        expect(dot).toContain("node [shape=circle");
+        expect(dot).toContain("edge [fontname=");
         expect(dot.endsWith("}")).toBe(true);
       });
 
@@ -32,24 +36,27 @@ describe("Graph Presenter Graphviz", () => {
         expect(dot).toContain('  "B Node";');
       });
 
-      it("should contain correct edge connection and weight label", () => {
+      it("should contain correct edge connection with weight and color", () => {
         const graph = createCleanGraph<number>();
         graph.addVertex(1).addVertex(2);
         graph.addEdge(1, 2, 100);
 
         const dot = presenterGraphviz(graph);
-        const expectedEdge = `"1" ${expectedConnector} "2" [label="100"];`;
 
-        expect(dot).toContain(expectedEdge);
+        expect(dot).toContain(
+          `"1" ${expectedConnector} "2" [label="100", color="#333333"];`,
+        );
       });
 
-      it("should not render label attribute if weight is 0", () => {
+      it("should render only color attribute if weight is 0", () => {
         const graph = createCleanGraph<number>();
         graph.addVertex(1).addVertex(2);
         graph.addEdge(1, 2, 0);
 
         const dot = presenterGraphviz(graph);
-        expect(dot).toContain(`"1" ${expectedConnector} "2";`);
+        expect(dot).toContain(
+          `"1" ${expectedConnector} "2" [color="#333333"];`,
+        );
         expect(dot).not.toContain("label=");
       });
 
@@ -60,7 +67,7 @@ describe("Graph Presenter Graphviz", () => {
 
         const dot = presenterGraphviz(graph);
         expect(dot).toContain(
-          `"Self" ${expectedConnector} "Self" [label="5"];`,
+          `"Self" ${expectedConnector} "Self" [label="5", color="#333333"];`,
         );
       });
 
@@ -85,8 +92,8 @@ describe("Graph Presenter Graphviz", () => {
           graph.addEdge("A", "B", 1).addEdge("B", "A", 2);
 
           const dot = presenterGraphviz(graph);
-          expect(dot).toContain('"A" -> "B" [label="1"];');
-          expect(dot).toContain('"B" -> "A" [label="2"];');
+          expect(dot).toContain('"A" -> "B" [label="1", color="#333333"];');
+          expect(dot).toContain('"B" -> "A" [label="2", color="#333333"];');
         });
       }
 
