@@ -16,6 +16,7 @@ import { createLinkedList } from "src/app/data-structures/LinkedList/factories/c
 import { createBinaryTree } from "src/app/data-structures/BinaryTree/factories/createBinaryTree";
 import { createGraph } from "src/app/data-structures/Graph/factories/createGraph";
 import { createGraphFromMatrix } from "src/app/data-structures/Graph/factories/createGraphFromMatrix";
+import { topologicalSort } from "src/app/data-structures/Graph/sort/topologicalSort";
 import Queue from "src/app/data-structures/Queue/Queue";
 import Stack from "src/app/data-structures/Stack/Stack";
 import PriorityQueue from "src/app/data-structures/PriorityQueue/PriorityQueue";
@@ -103,6 +104,7 @@ export {
   createBinaryTree,
   createLinkedList,
   createGraphIterator,
+  topologicalSort,
 };
 
 export {

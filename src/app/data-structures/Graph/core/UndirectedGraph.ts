@@ -1,4 +1,6 @@
-import AbstractGraph from "src/app/data-structures/Graph/core/AbstractGraph";
+import AbstractGraph, {
+  TGraphConstructorParams,
+} from "src/app/data-structures/Graph/core/AbstractGraph";
 import GraphEdge from "src/app/data-structures/Graph/core/GraphEdge";
 import IsNotFoundException from "src/app/exceptions/IsNotFoundException";
 
@@ -10,16 +12,17 @@ export default class UndirectedGraph<T> extends AbstractGraph<T> {
   /**
    * @inheritDoc
    */
-  public constructor() {
-    super();
+  public constructor(params?: TGraphConstructorParams<T>) {
+    super(params);
   }
 
+  /**
+   * @inheritDoc
+   */
   protected getEdgeKey(from: T, to: T): string {
-    if (this instanceof UndirectedGraph) {
-      return [from, to].sort().join(UndirectedGraph.EDGE_KEY_SEPARATOR);
-    }
-
-    return `${from}${UndirectedGraph.EDGE_KEY_SEPARATOR}${to}`;
+    const fromKey = this.keySelector(from);
+    const toKey = this.keySelector(to);
+    return [fromKey, toKey].sort().join(UndirectedGraph.EDGE_KEY_SEPARATOR);
   }
 
   /**

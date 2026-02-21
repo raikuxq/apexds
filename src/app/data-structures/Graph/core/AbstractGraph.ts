@@ -2,28 +2,38 @@ import GraphEdge from "src/app/data-structures/Graph/core/GraphEdge";
 import IsNotFoundException from "src/app/exceptions/IsNotFoundException";
 import IsAlreadyExistsException from "src/app/exceptions/IsAlreadyExistsException";
 
+export type TKeySelector<T> = (item: T) => string;
+export type TGraphConstructorParams<T> = {
+  customKeySelector?: TKeySelector<T>;
+};
+
 export default abstract class AbstractGraph<T> {
+  protected static readonly EDGE_KEY_SEPARATOR: string = "_";
+
   protected _vertices: Map<T, Set<T>>;
   protected _edges: Map<string, GraphEdge<T>>;
 
   /**
    * Created empty instance
    */
-  protected constructor() {
+  protected constructor(params?: TGraphConstructorParams<T>) {
     this._vertices = new Map<T, Set<T>>();
     this._edges = new Map<string, GraphEdge<T>>();
+    this.keySelector = params?.customKeySelector ?? ((v: T) => String(v));
   }
 
-  protected static readonly EDGE_KEY_SEPARATOR: string = "_";
+  /**
+   * Get edge identifier from type
+   * @example { id: 'abcd123', name: 'Maria' } => 'abcd123'
+   */
+  protected readonly keySelector: (vertex: T) => string;
 
   /**
    * Get edge key string from_to
    * @example Bob_Maria
    * @example Maria_Bob
    */
-  protected getEdgeKey(from: T, to: T): string {
-    return `${from}${AbstractGraph.EDGE_KEY_SEPARATOR}${to}`;
-  }
+  protected abstract getEdgeKey(from: T, to: T): string;
 
   /**
    * Find edge by its from and to vertices

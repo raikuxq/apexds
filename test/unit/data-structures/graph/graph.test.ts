@@ -392,5 +392,42 @@ describe.each([EnumGraphType.DIRECTED, EnumGraphType.UNDIRECTED])(
         });
       }
     });
+
+    describe("method vertexKeySelector", () => {
+      interface User {
+        id: number;
+        name: string;
+      }
+      const keySelector = (u: User) => String(u.id);
+      const alice = { id: 1, name: "Alice" };
+      const bob = { id: 2, name: "Bob" };
+
+      it("should handle objects as vertices using custom keys", () => {
+        const graph: IGraph<User> =
+          graphType === EnumGraphType.DIRECTED
+            ? new DirectedGraph<User>({ customKeySelector: keySelector })
+            : new UndirectedGraph<User>({ customKeySelector: keySelector });
+
+        graph.addVertex(alice).addVertex(bob);
+        graph.addEdge(alice, bob, 10);
+
+        expect(graph.hasVertex(alice)).toBe(true);
+        expect(graph.hasEdge(alice, bob)).toBe(true);
+        expect(graph.getEdgeWeight(alice, bob)).toBe(10);
+      });
+
+      it("should correctly remove object vertices and their edges", () => {
+        const graph: IGraph<User> =
+          graphType === EnumGraphType.DIRECTED
+            ? new DirectedGraph<User>({ customKeySelector: keySelector })
+            : new UndirectedGraph<User>({ customKeySelector: keySelector });
+
+        graph.addVertex(alice).addVertex(bob).addEdge(alice, bob);
+        graph.removeVertex(alice);
+
+        expect(graph.verticesCount()).toBe(1);
+        expect(graph.edgesCount()).toBe(0);
+      });
+    });
   },
 );
