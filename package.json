@@ -4,6 +4,7 @@
     "test": "jest",
     "dev": "nodemon --exec tsx src/index.ts",
     "demo": "nodemon --exec tsx demo/index.ts",
+    "benchmark:graph": "nodemon --exec tsx benchmarks/benchmark.graph.ts",
     "build:lib": "rimraf ./lib && vite build",
     "build:dts": "dts-bundle-generator -o lib/index.d.ts src/index.ts --no-check --inline-declare-externals false --external-inlines @babel/types",
     "build:full": "yarn build:lib && yarn build:dts",
