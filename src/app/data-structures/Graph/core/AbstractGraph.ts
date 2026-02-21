@@ -99,6 +99,13 @@ export default abstract class AbstractGraph<T> {
   }
 
   /**
+   * Get edge key by vertex value
+   */
+  public getVertexKey(vertex: T): string {
+    return this.keySelector(vertex);
+  }
+
+  /**
    * Get sum of all graph edges
    */
   public weight(): number {

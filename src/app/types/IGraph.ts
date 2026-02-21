@@ -7,6 +7,7 @@ export default interface IGraph<T> extends Iterable<T> {
   addVertex(data: T): this;
   removeVertex(data: T): this;
   hasVertex(data: T): boolean;
+  getVertexKey(data: T): string;
   getVertexNeighbors(data: T): Array<T>;
 
   addEdge(from: T, to: T, weight?: number): this;
