@@ -65,3 +65,31 @@ export const demoBstObjects = (): void => {
 
   logTree(bst);
 };
+
+export const demoLargeBst = (): void => {
+  const bst = new BinarySearchTree<number>();
+  const count = 100;
+  const maxRange = 1000;
+  const insertedValues = new Set<number>();
+
+  while (insertedValues.size < count) {
+    const val = Math.floor(Math.random() * maxRange);
+    if (!insertedValues.has(val)) {
+      bst.insert(val);
+      insertedValues.add(val);
+    }
+  }
+
+  console.log("--- LARGE BST STATS ---");
+  console.log("EXPECTED LENGTH:", count);
+  console.log("ACTUAL LENGTH:", bst.length());
+  console.log("HEIGHT:", bst.height());
+
+  const inOrder = bst.traverse(EnumTreeTraversalType.IN_ORDER);
+
+  const isSorted = inOrder.every((val, i, arr) => !i || arr[i - 1] <= val);
+  console.log("IS SORTED CORRECTLY:", isSorted);
+
+  console.log("TREE STRUCTURE (TOP LEVEL):");
+  console.log(util.inspect(bst, { showHidden: false, depth: 3, colors: true }));
+};
