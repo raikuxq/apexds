@@ -12,6 +12,8 @@ import { hasPath } from "src/app/data-structures/Graph/searching/hasPath";
 import { shortestPath } from "src/app/data-structures/Graph/searching/shortestPath";
 import { presenterAdjacencyMatrix } from "src/app/data-structures/Graph/presenter/presenterAdjacencyMatrix";
 import { presenterAdjacencyLists } from "src/app/data-structures/Graph/presenter/presenterAdjacencyLists";
+import { presenterJson } from "src/app/data-structures/Graph/presenter/presenterJson";
+import { presenterGraphviz } from "src/app/data-structures/Graph/presenter/presenterGraphviz";
 import { createLinkedList } from "src/app/data-structures/LinkedList/factories/createLinkedList";
 import { createBinaryTree } from "src/app/data-structures/BinaryTree/factories/createBinaryTree";
 import { createGraph } from "src/app/data-structures/Graph/factories/createGraph";
@@ -78,7 +80,6 @@ export {
   roundNumber,
   randomizeNumberInRange,
   swapArrayItems,
-  isDirectedAcyclicGraph,
 };
 
 export { bubbleSort, insertionSort, mergeSort, selectSort, quickSort };
@@ -107,6 +108,7 @@ export {
   createLinkedList,
   createGraphIterator,
   topologicalSort,
+  isDirectedAcyclicGraph,
 };
 
 export {
@@ -119,6 +121,8 @@ export {
   GraphIteratorDFS,
   presenterAdjacencyLists,
   presenterAdjacencyMatrix,
+  presenterJson,
+  presenterGraphviz,
   hasPath,
   shortestPath,
   GraphIteratorBFS,
