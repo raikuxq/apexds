@@ -82,6 +82,6 @@
     "vuepress": "^2.0.0-beta.48"
   },
   "dependencies": {},
-  "version": "4.0.0",
+  "version": "4.1.0",
   "sideEffects": false
 }
