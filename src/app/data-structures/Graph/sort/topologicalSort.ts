@@ -6,20 +6,15 @@ import UndirectedGraph from "src/app/data-structures/Graph/core/UndirectedGraph"
  * Performs a topological sort on a Directed Acyclic Graph (DAG).
  *
  * @template T
- * @param {Object} params - The function parameters.
- * @param {IGraph<T>} params.graph - The graph instance to sort.
+ * @param {IGraph<T>} graph - The graph instance to sort.
  * @returns {Array<T>} An array of vertices in topological order.
  * @throws {IllegalStateException} When a cycle is detected in the graph.
  */
-export const topologicalSort = <T>({
-  graph,
-}: {
-  graph: IGraph<T>;
-}): Array<T> => {
+export const topologicalSort = <T>(graph: IGraph<T>): Array<T> => {
   const result: T[] = [];
   const visited = new Map<T, boolean>();
   const recursionStack = new Map<T, boolean>();
-  const allVertices = graph.vertices();
+  const adjacencyList = graph.adjacencyList;
 
   if (graph instanceof UndirectedGraph) {
     throw new IllegalStateException(
@@ -51,7 +46,7 @@ export const topologicalSort = <T>({
     result.push(vertex);
   };
 
-  for (const vertex of allVertices) {
+  for (const vertex of adjacencyList.keys()) {
     if (!visited.get(vertex)) {
       visit(vertex);
     }

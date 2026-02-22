@@ -1,13 +1,14 @@
 import GraphEdge from "src/app/data-structures/Graph/core/GraphEdge";
 import IsNotFoundException from "src/app/exceptions/IsNotFoundException";
 import IsAlreadyExistsException from "src/app/exceptions/IsAlreadyExistsException";
+import IGraph from "src/app/types/IGraph";
 
 export type TKeySelector<T> = (item: T) => string;
 export type TGraphConstructorParams<T> = {
   customKeySelector?: TKeySelector<T>;
 };
 
-export default abstract class AbstractGraph<T> {
+export default abstract class AbstractGraph<T> implements IGraph<T> {
   protected static readonly EDGE_KEY_SEPARATOR: string = "_";
 
   protected _vertices: Map<T, Set<T>>;
@@ -181,11 +182,15 @@ export default abstract class AbstractGraph<T> {
 
   /**
    * Get vertex neighbors by its data
+   * @throws {IsNotFoundException} when vertex is already does not exist
    */
-  public getVertexNeighbors(data: T): Array<T> {
-    const vertex = this.tryFindVertex(data);
-    const neighbors = this._vertices.get(vertex);
-    return neighbors ? Array.from(neighbors) : [];
+  public getVertexNeighbors(data: T): Set<T> {
+    const neighbors = this._vertices.get(data);
+    if (neighbors) {
+      return neighbors;
+    } else {
+      throw new IsNotFoundException("Vertex neighbors was not found");
+    }
   }
 
   /**
@@ -212,6 +217,13 @@ export default abstract class AbstractGraph<T> {
     const edge = this.getEdgeByValue(fromVertex, toVertex);
 
     return edge.weight;
+  }
+
+  /**
+   * Raw adjacency list
+   */
+  public get adjacencyList() {
+    return this._vertices;
   }
 
   /**

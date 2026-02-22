@@ -22,7 +22,7 @@ export default class DirectedGraph<T> extends AbstractGraph<T> {
   protected getEdgeKey(from: T, to: T): string {
     const fromKey = this.keySelector(from);
     const toKey = this.keySelector(to);
-    return `${fromKey}${AbstractGraph.EDGE_KEY_SEPARATOR}${toKey}`;
+    return fromKey + AbstractGraph.EDGE_KEY_SEPARATOR + toKey;
   }
 
   /**

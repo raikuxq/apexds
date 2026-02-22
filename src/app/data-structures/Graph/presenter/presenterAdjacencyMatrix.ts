@@ -35,19 +35,26 @@ export const presenterAdjacencyMatrix = <T>(
   graph: IGraph<T>,
 ): TypeArrayMatrix => {
   const vertices = graph.vertices();
-  const matrix = new Array(graph.verticesCount());
+  const size = vertices.length;
+  const vertexToIndex = new Map<T, number>();
 
-  vertices.forEach((graphVertexRow, rowIndex) => {
-    matrix[rowIndex] = new Array(graph.verticesCount());
+  vertices.forEach((v, i) => vertexToIndex.set(v, i));
 
-    vertices.forEach((graphVertexColumn, columnIndex) => {
-      const isElementLinked = graph.hasEdge(graphVertexRow, graphVertexColumn);
+  const matrix: TypeArrayMatrix = Array.from({ length: size }, () =>
+    new Array(size).fill(EDGE_NOT_EXISTS_STATE),
+  );
 
-      matrix[rowIndex][columnIndex] = isElementLinked
-        ? EDGE_EXISTS_STATE
-        : EDGE_NOT_EXISTS_STATE;
-    });
-  });
+  for (const [vertex, neighbors] of graph.adjacencyList) {
+    const rowIndex = vertexToIndex.get(vertex);
+    if (rowIndex === undefined) continue;
+
+    for (const neighbor of neighbors) {
+      const colIndex = vertexToIndex.get(neighbor);
+      if (colIndex !== undefined) {
+        matrix[rowIndex][colIndex] = EDGE_EXISTS_STATE;
+      }
+    }
+  }
 
   return matrix;
 };

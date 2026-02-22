@@ -32,14 +32,13 @@ describe.each([EnumGraphType.DIRECTED, EnumGraphType.UNDIRECTED])(
 
         it("should return correct list", () => {
           const list = presenterAdjacencyLists(graph);
-          const expectedList = new Map<number, Array<number>>();
+          const expectedList = new Map<number, Set<number>>();
 
-          // eslint-disable-next-line
           expectedList
-              .set(1, [2, 3])
-              .set(2, [1])
-              .set(3, [1, 4])
-              .set(4, [3]);
+            .set(1, new Set([2, 3]))
+            .set(2, new Set([1]))
+            .set(3, new Set([1, 4]))
+            .set(4, new Set([3]));
 
           expect(list).toEqual(expectedList);
         });
@@ -59,14 +58,13 @@ describe.each([EnumGraphType.DIRECTED, EnumGraphType.UNDIRECTED])(
 
         it("should return correct list", () => {
           const list = presenterAdjacencyLists(graph);
-          const expectedList = new Map<number, Array<number>>();
+          const expectedList = new Map<number, Set<number>>();
 
-          // eslint-disable-next-line
           expectedList
-              .set(1, [2, 3])
-              .set(2, [])
-              .set(3, [4])
-              .set(4, []);
+            .set(1, new Set([2, 3]))
+            .set(2, new Set([]))
+            .set(3, new Set([4]))
+            .set(4, new Set([]));
 
           expect(list).toEqual(expectedList);
         });

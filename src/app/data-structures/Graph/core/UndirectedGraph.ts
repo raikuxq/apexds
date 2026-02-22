@@ -22,7 +22,9 @@ export default class UndirectedGraph<T> extends AbstractGraph<T> {
   protected getEdgeKey(from: T, to: T): string {
     const fromKey = this.keySelector(from);
     const toKey = this.keySelector(to);
-    return [fromKey, toKey].sort().join(UndirectedGraph.EDGE_KEY_SEPARATOR);
+    return toKey > fromKey
+      ? fromKey + UndirectedGraph.EDGE_KEY_SEPARATOR + toKey
+      : toKey + UndirectedGraph.EDGE_KEY_SEPARATOR + fromKey;
   }
 
   /**

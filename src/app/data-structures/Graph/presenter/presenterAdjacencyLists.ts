@@ -19,11 +19,6 @@ import IGraph from "src/app/types/IGraph";
  **/
 export const presenterAdjacencyLists = <T>(
   graph: IGraph<T>,
-): Map<T, Array<T>> => {
-  return graph.vertices().reduce((map: Map<T, Array<T>>, vertex: T) => {
-    const neighbors = graph.getVertexNeighbors(vertex);
-    map.set(vertex, neighbors);
-
-    return map;
-  }, new Map());
+): ReadonlyMap<T, ReadonlySet<T>> => {
+  return graph.adjacencyList;
 };

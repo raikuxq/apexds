@@ -6,13 +6,13 @@ describe("Topological sort algorithm", () => {
   describe("Empty and simple graphs", () => {
     it("should return an empty array for an empty graph", () => {
       const graph = new DirectedGraph<string>();
-      expect(topologicalSort({ graph })).toEqual([]);
+      expect(topologicalSort(graph)).toEqual([]);
     });
 
     it("should return a single vertex for a graph with one node", () => {
       const graph = new DirectedGraph<string>();
       graph.addVertex("A");
-      expect(topologicalSort({ graph })).toEqual(["A"]);
+      expect(topologicalSort(graph)).toEqual(["A"]);
     });
   });
 
@@ -26,7 +26,7 @@ describe("Topological sort algorithm", () => {
         .addEdge("A", "B")
         .addEdge("B", "C");
 
-      expect(topologicalSort({ graph })).toEqual(["A", "B", "C"]);
+      expect(topologicalSort(graph)).toEqual(["A", "B", "C"]);
     });
 
     it("should work correctly regardless of vertex addition order", () => {
@@ -38,7 +38,7 @@ describe("Topological sort algorithm", () => {
         .addEdge("A", "B")
         .addEdge("B", "C");
 
-      expect(topologicalSort({ graph })).toEqual(["A", "B", "C"]);
+      expect(topologicalSort(graph)).toEqual(["A", "B", "C"]);
     });
   });
 
@@ -55,7 +55,7 @@ describe("Topological sort algorithm", () => {
         .addEdge("Left", "End")
         .addEdge("Right", "End");
 
-      const result = topologicalSort({ graph });
+      const result = topologicalSort(graph);
 
       expect(result.indexOf("Root")).toBe(0);
       expect(result.indexOf("End")).toBe(3);
@@ -72,7 +72,7 @@ describe("Topological sort algorithm", () => {
         .addVertex("D")
         .addEdge("C", "D");
 
-      const result = topologicalSort({ graph });
+      const result = topologicalSort(graph);
 
       expect(result.indexOf("A")).toBeLessThan(result.indexOf("B"));
       expect(result.indexOf("C")).toBeLessThan(result.indexOf("D"));
@@ -86,7 +86,7 @@ describe("Topological sort algorithm", () => {
       graph.addVertex("A").addVertex("B").addEdge("A", "B").addEdge("B", "A");
 
       expect(() => {
-        topologicalSort({ graph });
+        topologicalSort(graph);
       }).toThrow(IllegalStateException);
     });
 
@@ -103,7 +103,7 @@ describe("Topological sort algorithm", () => {
         .addEdge("D", "B");
 
       expect(() => {
-        topologicalSort({ graph });
+        topologicalSort(graph);
       }).toThrow(IllegalStateException);
     });
   });

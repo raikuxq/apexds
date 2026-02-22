@@ -5,6 +5,7 @@
     "dev": "nodemon --exec tsx src/index.ts",
     "demo": "nodemon --exec tsx demo/index.ts",
     "benchmark:graph": "nodemon --exec tsx benchmarks/benchmark.graph.ts",
+    "benchmark:bst": "nodemon --exec tsx benchmarks/benchmark.bst.ts",
     "build:lib": "rimraf ./lib && vite build",
     "build:dts": "dts-bundle-generator -o lib/index.d.ts src/index.ts --no-check --inline-declare-externals false --external-inlines @babel/types",
     "build:full": "yarn build:lib && yarn build:dts",
@@ -14,6 +15,11 @@
     "docs:dev": "vuepress dev docs",
     "docs:build": "vuepress build docs"
   },
+  "author": {
+    "email": "raikuxqt@gmail.com",
+    "name": "raikuxq"
+  },
+  "license": "MIT",
   "repository": {
     "type": "git",
     "url": "https://github.com/raikuxq/lab-ts-algorithms"

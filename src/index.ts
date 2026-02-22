@@ -17,6 +17,7 @@ import { createBinaryTree } from "src/app/data-structures/BinaryTree/factories/c
 import { createGraph } from "src/app/data-structures/Graph/factories/createGraph";
 import { createGraphFromMatrix } from "src/app/data-structures/Graph/factories/createGraphFromMatrix";
 import { topologicalSort } from "src/app/data-structures/Graph/sort/topologicalSort";
+import { isDirectedAcyclicGraph } from "src/app/data-structures/Graph/utils/isDAG";
 import Queue from "src/app/data-structures/Queue/Queue";
 import Stack from "src/app/data-structures/Stack/Stack";
 import PriorityQueue from "src/app/data-structures/PriorityQueue/PriorityQueue";
@@ -77,6 +78,7 @@ export {
   roundNumber,
   randomizeNumberInRange,
   swapArrayItems,
+  isDirectedAcyclicGraph,
 };
 
 export { bubbleSort, insertionSort, mergeSort, selectSort, quickSort };

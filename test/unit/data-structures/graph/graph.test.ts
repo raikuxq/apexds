@@ -168,10 +168,14 @@ describe.each([EnumGraphType.DIRECTED, EnumGraphType.UNDIRECTED])(
 
           describe("should not multiple edges", () => {
             it("should not add vertex to first edge", () => {
-              expect(graph.getVertexNeighbors("Mike")).toEqual(["Bob"]);
+              expect(graph.getVertexNeighbors("Mike")).toEqual(
+                new Set(["Bob"]),
+              );
             });
             it("should not add vertex to second edge", () => {
-              expect(graph.getVertexNeighbors("Bob")).toEqual(["Mike"]);
+              expect(graph.getVertexNeighbors("Bob")).toEqual(
+                new Set(["Mike"]),
+              );
             });
           });
 
@@ -205,10 +209,14 @@ describe.each([EnumGraphType.DIRECTED, EnumGraphType.UNDIRECTED])(
 
           describe("should not multiple edges", () => {
             it("should not add vertex to first edge", () => {
-              expect(graph.getVertexNeighbors("Mike")).toEqual(["Bob"]);
+              expect(graph.getVertexNeighbors("Mike")).toEqual(
+                new Set(["Bob"]),
+              );
             });
             it("should not add vertex to second edge", () => {
-              expect(graph.getVertexNeighbors("Bob")).toEqual(["Mike"]);
+              expect(graph.getVertexNeighbors("Bob")).toEqual(
+                new Set(["Mike"]),
+              );
             });
           });
 
@@ -258,9 +266,9 @@ describe.each([EnumGraphType.DIRECTED, EnumGraphType.UNDIRECTED])(
             const lisaNeighbors = graph.getVertexNeighbors("Lisa");
             const johnNeighbors = graph.getVertexNeighbors("John");
 
-            expect(mikeNeighbors).toEqual(["Lisa"]);
-            expect(lisaNeighbors).toEqual(["Mike", "John"]);
-            expect(johnNeighbors).toEqual(["Lisa"]);
+            expect(mikeNeighbors).toEqual(new Set(["Lisa"]));
+            expect(lisaNeighbors).toEqual(new Set(["Mike", "John"]));
+            expect(johnNeighbors).toEqual(new Set(["Lisa"]));
           });
         });
       }
@@ -291,9 +299,9 @@ describe.each([EnumGraphType.DIRECTED, EnumGraphType.UNDIRECTED])(
             const lisaNeighbors = graph.getVertexNeighbors("Lisa");
             const johnNeighbors = graph.getVertexNeighbors("John");
 
-            expect(mikeNeighbors).toEqual(["Lisa"]);
-            expect(lisaNeighbors).toEqual([]);
-            expect(johnNeighbors).toEqual(["Lisa"]);
+            expect(mikeNeighbors).toEqual(new Set(["Lisa"]));
+            expect(lisaNeighbors).toEqual(new Set([]));
+            expect(johnNeighbors).toEqual(new Set(["Lisa"]));
           });
         });
       }
@@ -374,7 +382,7 @@ describe.each([EnumGraphType.DIRECTED, EnumGraphType.UNDIRECTED])(
             .addEdge(1, 2)
             .addEdge(2, 3);
 
-          expect(graph.getVertexNeighbors(2)).toEqual([1, 3]);
+          expect(graph.getVertexNeighbors(2)).toEqual(new Set([1, 3]));
         });
       }
 
@@ -388,7 +396,7 @@ describe.each([EnumGraphType.DIRECTED, EnumGraphType.UNDIRECTED])(
             .addEdge(1, 2)
             .addEdge(2, 3);
 
-          expect(graph.getVertexNeighbors(2)).toEqual([3]);
+          expect(graph.getVertexNeighbors(2)).toEqual(new Set([3]));
         });
       }
     });
