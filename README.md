@@ -1,6 +1,6 @@
 # @apexds/core
 
-Common algorithms and data structures written in **TypeScript**, tested with **Jest**.
+Lightweight & modular collection of data structures for TypeScript. Features Directed/Undirected Graphs, Advanced Pathfinding (Dijkstra, BFS/DFS), Randomized BST (Treap-based), and optimized presenters. Zero-dependency, ESM-first, and fully tree-shakeable.
 
 [![npm version](https://img.shields.io/npm/v/@apexds/core.svg)](https://www.npmjs.com/package/@apexds/core)
 [![minzip](https://img.shields.io/bundlephobia/minzip/@apexds/core)](https://bundlephobia.com/package/@apexds/core)
