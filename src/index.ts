@@ -91,12 +91,15 @@ export {
   IterableSingleLinkedList,
   DoubleLinkedList,
   IterableDoubleLinkedList,
-  RandBinarySearchTree,
-  BinarySearchTree,
   DirectedGraph,
   UndirectedGraph,
   BinaryHeap,
   PriorityQueue,
+  RandBinarySearchTree,
+  BinarySearchTree as RawBinarySearchTree,
+
+  /* default  implementation */
+  RandBinarySearchTree as BinarySearchTree,
 };
 
 export { EDGE_NOT_EXISTS_STATE, EDGE_EXISTS_STATE };
