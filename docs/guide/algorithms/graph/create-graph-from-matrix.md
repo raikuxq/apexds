@@ -9,7 +9,7 @@ Is a matrix that contains 1 in case of edge exists or 0 in case it does not
 ### Import
 
 ```ts
-import {createGraphFromMatrix} from "@raikuxq/alg-ds/lib/exports/algorithms";
+import {createGraphFromMatrix} from "@apexds/core/lib/exports/algorithms";
 ```
 
 ### API reference
@@ -19,9 +19,9 @@ API: [/api/algorithms/graph/create-graph-from-matrix](/api/algorithms/graph/crea
 ### Example usage
 
 ```ts
-import {createGraphFromMatrix} from "@raikuxq/alg-ds/lib/exports/algorithms";
-import {DirectedGraph} from "@raikuxq/alg-ds/lib/exports/data-structures";
-import {EnumGraphType} from "@raikuxq/alg-ds/lib/exports/types"
+import {createGraphFromMatrix} from "@apexds/core/lib/exports/algorithms";
+import {DirectedGraph} from "@apexds/core/lib/exports/data-structures";
+import {EnumGraphType} from "@apexds/core/lib/exports/types"
 
 /**
  * DIRECTED graph:

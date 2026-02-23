@@ -12,7 +12,7 @@ O(n^2)
 ## Import
 
 ```ts
-import {transposeMatrix} from "@raikuxq/alg-ds/lib/exports/algorithms";
+import {transposeMatrix} from "@apexds/core/lib/exports/algorithms";
 ```
 
 ## API reference
@@ -22,7 +22,7 @@ Transpose matrix API: [/api/algorithms/transpose-matrix](/api/algorithms/transpo
 ## Example usage
 
 ```ts
-import {transposeMatrix} from "@raikuxq/alg-ds/lib/exports/algorithms";
+import {transposeMatrix} from "@apexds/core/lib/exports/algorithms";
 
 const srcMatrix = [
     [0, 1, 1],

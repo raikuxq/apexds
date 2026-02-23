@@ -22,7 +22,7 @@ Worst case: `O(1)`
 ### Import
 
 ```ts
-import {selectionSort} from "@raikuxq/alg-ds/lib/exports/algorithms";
+import {selectionSort} from "@apexds/core/lib/exports/algorithms";
 ```
 
 ### API reference
@@ -32,7 +32,7 @@ Sort API: [/api/algorithms/sort/selection](/api/algorithms/sort/selection)
 ### Example usage
 
 ```ts
-import {selectionSort} from "@raikuxq/alg-ds/lib/exports/algorithms";
+import {selectionSort} from "@apexds/core/lib/exports/algorithms";
 
 selectionSort([-1, 3, -2, 1, 2, 0, -3]); // [-3, -2, -1, 0, 1, 2, 3]
 ```

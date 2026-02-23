@@ -15,13 +15,13 @@ Stack API: [/api/data-structures/stack](/api/data-structures/stack)
 ## Import
 
 ```ts
-import {Stack} from "@raikuxq/alg-ds/lib/exports/data-structures";
+import {Stack} from "@apexds/core/lib/exports/data-structures";
 ```
 
 ## Example usage
 
 ```ts
-import {Stack} from "@raikuxq/alg-ds/lib/exports/data-structures";
+import {Stack} from "@apexds/core/lib/exports/data-structures";
 
 const stack = new Stack<string>();
 

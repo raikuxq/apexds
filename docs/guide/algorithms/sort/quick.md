@@ -22,7 +22,7 @@ Worst: `O(1)`
 ### Import
 
 ```ts
-import {quickSort} from "@raikuxq/alg-ds/lib/exports/algorithms";
+import {quickSort} from "@apexds/core/lib/exports/algorithms";
 ```
 
 ### API reference
@@ -32,7 +32,7 @@ Sort API: [/api/algorithms/sort/quick](/api/algorithms/sort/quick)
 ### Example usage
 
 ```ts
-import {quickSort} from "@raikuxq/alg-ds/lib/exports/algorithms";
+import {quickSort} from "@apexds/core/lib/exports/algorithms";
 
 quickSort([-1, 3, -2, 1, 2, 0, -3]); // [-3, -2, -1, 0, 1, 2, 3]
 ```

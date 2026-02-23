@@ -4,7 +4,7 @@ const {searchPlugin} = require('@vuepress/plugin-search')
 
 module.exports = {
     lang: 'en-US',
-    title: '@raikuxq/alg-ds',
+    title: '@apexds/core',
     description: 'Algorithms & Data structures',
     theme: defaultTheme({
         contributors: false,
@@ -22,7 +22,7 @@ module.exports = {
             },
             {
                 text: 'NPM',
-                link: 'https://www.npmjs.com/package/@raikuxq/alg-ds'
+                link: 'https://www.npmjs.com/package/@apexds/core'
             }
         ],
         editLink: false,

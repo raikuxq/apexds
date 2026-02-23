@@ -8,7 +8,7 @@ orientation of the corresponding edges in G
 ### Import
 
 ```ts
-import {transposeDirectedGraph} from "@raikuxq/alg-ds/lib/exports/algorithms";
+import {transposeDirectedGraph} from "@apexds/core/lib/exports/algorithms";
 ```
 
 ### API reference
@@ -18,8 +18,8 @@ API: [/api/algorithms/graph/transpose-directed-graph](/api/algorithms/graph/tran
 ### Example usage
 
 ```ts
-import {transposeDirectedGraph} from "@raikuxq/alg-ds/lib/exports/algorithms";
-import {DirectedGraph} from "@raikuxq/alg-ds/lib/exports/data-structures";
+import {transposeDirectedGraph} from "@apexds/core/lib/exports/algorithms";
+import {DirectedGraph} from "@apexds/core/lib/exports/data-structures";
 
 const sourceGraph = new DirectedGraph();
 

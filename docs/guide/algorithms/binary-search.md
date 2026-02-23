@@ -11,7 +11,7 @@ O(log(n))
 ### Import
 
 ```ts
-import {binarySearch} from "@raikuxq/alg-ds/lib/exports/algorithms";
+import {binarySearch} from "@apexds/core/lib/exports/algorithms";
 ```
 
 ### API reference:
@@ -21,7 +21,7 @@ Binary search API: [/api/algorithms/binary-search](/api/algorithms/binary-search
 ### Example usage
 
 ```ts
-import {binarySearch} from "@raikuxq/alg-ds/lib/exports/algorithms";
+import {binarySearch} from "@apexds/core/lib/exports/algorithms";
 
 const arr = new Array(10).fill(undefined).map((item, index) => index + 1);
 

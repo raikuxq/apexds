@@ -24,7 +24,7 @@ of nodes. Operations that can be performed on singly linked lists include insert
 ## Import
 
 ```ts
-import {SingleLinkedList, DoubleLinkedList} from "@raikuxq/alg-ds/lib/exports/data-structures";
+import {SingleLinkedList, DoubleLinkedList} from "@apexds/core/lib/exports/data-structures";
 ```
 
 ## API reference
@@ -34,7 +34,7 @@ Linked List API: [/api/data-structures/linked-list](/api/data-structures/linked-
 ## Example linked list usage
 
 ```ts
-import {DoubleLinkedList} from "@raikuxq/alg-ds/lib/exports/data-structures";
+import {DoubleLinkedList} from "@apexds/core/lib/exports/data-structures";
 
 const list = new LinkedList<string>();
 
@@ -51,7 +51,7 @@ list.has("John"); // false
 ## Example iterator usage
 
 ```ts
-import {IterableDoubleLinkedList} from "@raikuxq/alg-ds/lib/exports/data-structures";
+import {IterableDoubleLinkedList} from "@apexds/core/lib/exports/data-structures";
 
 const list = new IterableDoubleLinkedList<number>();
 linkedList.pushFromArray([10, 20, 30]);

@@ -12,7 +12,7 @@ Read full: [wiki/queue](https://en.wikipedia.org/wiki/Queue_(abstract_data_type)
 ## Import
 
 ```ts
-import {Queue} from "@raikuxq/alg-ds/lib/exports/data-structures";
+import {Queue} from "@apexds/core/lib/exports/data-structures";
 ```
 
 ## API reference
@@ -22,7 +22,7 @@ Queue API: [/api/data-structures/queue](/api/data-structures/queue)
 ## Example usage
 
 ```ts
-import {Queue} from "@raikuxq/alg-ds/lib/exports/data-structures";
+import {Queue} from "@apexds/core/lib/exports/data-structures";
 
 const queue = new Queue<string>();
 
