@@ -151,8 +151,9 @@ sftp-config.json
 .idea/
 
 lib/
-/docs/.vuepress/.cache
-/docs/.vuepress/.temp
-/docs/.vuepress/dist
+/docs/.vitepress/.cache
+/docs/.vitepress/.temp
+/docs/.vitepress/dist
+/docs/.vitepress/cache
 
 demo/index.ts

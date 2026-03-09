@@ -10,7 +10,10 @@ Read full: [wiki/stack](https://en.wikipedia.org/wiki/Stack_(abstract_data_type)
 
 ## API reference
 
+:::tip API Reference
+
 Stack API: [/api/data-structures/stack](/api/data-structures/stack)
+:::
 
 ## Import
 
