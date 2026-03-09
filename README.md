@@ -3,8 +3,7 @@
 Lightweight & modular collection of data structures for TypeScript. Features Directed/Undirected Graphs, Advanced Pathfinding (Dijkstra, BFS/DFS), Randomized BST (Treap-based), and optimized presenters. Zero-dependency, ESM-first, and fully tree-shakeable.
 
 [![npm version](https://img.shields.io/npm/v/@apexds/core.svg)](https://www.npmjs.com/package/@apexds/core)
-[![minzip](https://img.shields.io/bundlephobia/minzip/@apexds/core)](https://bundlephobia.com/package/@apexds/core)
-[![gzip size](https://img.shields.io/bundlejs/size/gzip/@apexds/core)](https://bundlejs.com/?q=@apexds/core)
+[![minzip](https://deno.bundlejs.com/badge?q=@apexds/core)](https://bundlejs.com/?q=%40apexds%2Fcore)
 ---
 
 ## Documentation
@@ -204,4 +203,5 @@ Extends [BinarySearchNode](src/app/data-structures/BinaryTree/core/BinarySearchT
 — Implementation of randomized binary search tree, which gives expected log(N) height. 
 INSERTION have a 1/N+1 probability of inserting into root. 
 Extends [BinarySearchTree](src/app/data-structures/BinaryTree/core/BinarySearchTree/BinarySearchTree.ts).
+
 
