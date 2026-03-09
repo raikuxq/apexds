@@ -9,7 +9,7 @@ describes the set of neighbors of a particular vertex in the graph.
 ### Import
 
 ```ts
-import {presenterAdjacencyLists} from "@apexds/core/lib/exports/algorithms";
+import {presenterAdjacencyLists} from "@apexds/core";
 ```
 
 ### API reference
@@ -19,8 +19,8 @@ API: [/api/algorithms/graph/presenter-adjacency-lists](/api/algorithms/graph/pre
 ### Example usage
 
 ```ts
-import {presenterAdjacencyLists} from "@apexds/core/lib/exports/algorithms";
-import {DirectedGraph} from "@apexds/core/lib/exports/data-structures";
+import {presenterAdjacencyLists} from "@apexds/core";
+import {DirectedGraph} from "@apexds/core";
 
 const graph: IGraph<number> = new UndirectedGraph();
 

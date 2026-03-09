@@ -21,7 +21,7 @@ represent for example costs, lengths or capacities, depending on the problem at 
 ## Import
 
 ```ts
-import {UndirectedGraph, DirectedGraph} from "@apexds/core/lib/exports/data-structures";
+import {UndirectedGraph, DirectedGraph} from "@apexds/core";
 ```
 
 ## API reference
@@ -31,7 +31,7 @@ Graph API: [/api/data-structures/graph](/api/data-structures/graph)
 ## Example usage
 
 ```ts
-import {UndirectedGraph} from "@apexds/core/lib/exports/data-structures";
+import {UndirectedGraph} from "@apexds/core";
 
 const graph = new UndirectedGraph<string>();
 

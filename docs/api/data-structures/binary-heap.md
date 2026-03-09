@@ -30,7 +30,7 @@ Returns true if the heap contains no elements
 
 Retrieves the root element without removing it
 
-###### Throws: [`CollectionIsEmptyException`](/api/exceptions/state) when heap is empty
+###### Throws: [`CollectionIsEmptyException`](/api/exceptions) when heap is empty
 
 <br><br>
 
@@ -50,7 +50,7 @@ Adds a new value and restores heap properties
 
 Removes and returns the root element (minimum based on comparator)
 
-###### Throws: [`CollectionIsEmptyException`](/api/exceptions/state) when heap is empty
+###### Throws: [`CollectionIsEmptyException`](/api/exceptions) when heap is empty
 
 <br><br>
 

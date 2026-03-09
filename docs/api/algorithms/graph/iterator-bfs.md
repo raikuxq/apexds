@@ -32,7 +32,7 @@ Init iterator by passing 'from' vertex
 |------|------|----------|---------|--------------|
 | from | `T`  | +        |         | Start vertex |
 
-###### Throws [`IsNotFoundException`](/api/exceptions/state) when there is no next element
+###### Throws [`IsNotFoundException`](/api/exceptions) when there is no next element
 
 <br><br>
 
@@ -40,7 +40,7 @@ Init iterator by passing 'from' vertex
 
 Iterate to next element (depends on iteration strategy)
 
-###### Throws [`IllegalStateException`](/api/exceptions/state) when there is no next element
+###### Throws [`IllegalStateException`](/api/exceptions) when there is no next element
 
 <br><br>
 
@@ -48,7 +48,7 @@ Iterate to next element (depends on iteration strategy)
 
 Get current element
 
-###### Throws [`IllegalStateException`](/api/exceptions/state) when there is no current element
+###### Throws [`IllegalStateException`](/api/exceptions) when there is no current element
 
 <br><br>
 
@@ -68,6 +68,6 @@ Get full path between two given vertices
 | from | `T`  | +        |         | Start vertex |
 | to   | `T`  | +        |         | End vertex   |
 
-###### Throws [`IllegalStateException`](/api/exceptions/state) when there is no path at all
+###### Throws [`IllegalStateException`](/api/exceptions) when there is no path at all
 
 <br><br>

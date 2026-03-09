@@ -28,7 +28,7 @@ Creates empty instance
 
 Returns value from top of queue
 
-###### Throws: [`CollectionIsEmptyException`](/api/exceptions/state) when queue is empty
+###### Throws: [`CollectionIsEmptyException`](/api/exceptions) when queue is empty
 
 <br><br>
 
@@ -36,7 +36,7 @@ Returns value from top of queue
 
 Returns value from top of queue and removes it
 
-###### Throws: [`CollectionIsEmptyException`](/api/exceptions/state) when queue is empty
+###### Throws: [`CollectionIsEmptyException`](/api/exceptions) when queue is empty
 
 <br><br>
 
@@ -50,7 +50,7 @@ Add value to top of queue
 |-------|------|----------|---------|-------------|
 | value | `T`  | +        | -       |             |
 
-###### Throws: [`CollectionIsFullException`](/api/exceptions/state) when there is no space available
+###### Throws: [`CollectionIsFullException`](/api/exceptions) when there is no space available
 
 <br><br>
 

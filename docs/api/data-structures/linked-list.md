@@ -32,7 +32,7 @@ Creates empty instance
 
 Returns value from top of list
 
-###### Throws: [`CollectionIsEmptyException`](/api/exceptions/state) when list is empty
+###### Throws: [`CollectionIsEmptyException`](/api/exceptions) when list is empty
 
 <br><br>
 
@@ -40,7 +40,7 @@ Returns value from top of list
 
 Removes item from list end (head element) and returns its value
 
-###### Throws: [`CollectionIsEmptyException`](/api/exceptions/state) when list is empty
+###### Throws: [`CollectionIsEmptyException`](/api/exceptions) when list is empty
 
 <br><br>
 
@@ -54,7 +54,7 @@ Add value to top of list
 |-------|------|----------|---------|-------------|
 | value | `T`  | +        | -       |             |
 
-###### Throws: [`CollectionIsFullException`](/api/exceptions/state) when there is no space available
+###### Throws: [`CollectionIsFullException`](/api/exceptions) when there is no space available
 
 <br><br>
 
@@ -74,7 +74,7 @@ Check is list has given value
 
 Get first element of list (tail)
 
-###### Throws: [`CollectionIsEmptyException`](/api/exceptions/state) when list is empty
+###### Throws: [`CollectionIsEmptyException`](/api/exceptions) when list is empty
 
 <br><br>
 
@@ -88,9 +88,9 @@ Get element by given index from list start
 |-------|----------|----------|---------|-------------------------------|
 | index | `number` | +        | -       | 0 <= index <= list.length - 1 |
 
-###### Throws: [`CollectionIsEmptyException`](/api/exceptions/state) when list is empty
+###### Throws: [`CollectionIsEmptyException`](/api/exceptions) when list is empty
 
-###### Throws: [`IndexOutOfBoundsException`](/api/exceptions/argument) when index is out of range
+###### Throws: [`IndexOutOfBoundsException`](/api/exceptions) when index is out of range
 
 <br><br>
 
@@ -98,7 +98,7 @@ Get element by given index from list start
 
 Add new node into list start (node becomes tail)
 
-###### Throws: [`CollectionIsFullException`](/api/exceptions/state) when there is no space available
+###### Throws: [`CollectionIsFullException`](/api/exceptions) when there is no space available
 
 ###### Params:
 
@@ -119,9 +119,9 @@ Add new node into list by index
 | value     | `T`      | +        | -       |                               |
 | fromIndex | `number` | +        | -       | 0 <= index <= list.length - 1 |
 
-###### Throws: [`CollectionIsFullException`](/api/exceptions/state) when there is no space available
+###### Throws: [`CollectionIsFullException`](/api/exceptions) when there is no space available
 
-###### Throws: [`IndexOutOfBoundsException`](/api/exceptions/argument) when index is out of range
+###### Throws: [`IndexOutOfBoundsException`](/api/exceptions) when index is out of range
 
 <br><br>
 
@@ -129,7 +129,7 @@ Add new node into list by index
 
 Remove node from list start (tail element) and get its value
 
-###### Throws: [`CollectionIsEmptyException`](/api/exceptions/state) when list is empty
+###### Throws: [`CollectionIsEmptyException`](/api/exceptions) when list is empty
 
 <br><br>
 
@@ -143,7 +143,7 @@ Remove node from list by index
 |-----------|----------|----------|---------|-------------------------------|
 | fromIndex | `number` | +        | -       | 0 <= index <= list.length - 1 |
 
-###### Throws: [`CollectionIsEmptyException`](/api/exceptions/state) when list is empty
+###### Throws: [`CollectionIsEmptyException`](/api/exceptions) when list is empty
 
 <br><br>
 
@@ -157,7 +157,7 @@ Add elements from array collection in order from start
 |----------|------------|----------|---------|-------------|
 | elements | `Array<T>` | +        | -       |             |
 
-###### Throws: [`CollectionIsFullException`](/api/exceptions/state) when there is no space available
+###### Throws: [`CollectionIsFullException`](/api/exceptions) when there is no space available
 
 <br><br>
 
@@ -254,9 +254,9 @@ Creates empty instance
 |-----------|----------|----------|---------|-------------------------------|
 | fromIndex | `number` | +        | -       | 0 <= index <= list.length - 1 |
 
-###### Throws: [`CollectionIsEmptyException`](/api/exceptions/state) when list is empty
+###### Throws: [`CollectionIsEmptyException`](/api/exceptions) when list is empty
 
-###### Throws: [`IndexOutOfBoundsException`](/api/exceptions/argument) when index is out of range
+###### Throws: [`IndexOutOfBoundsException`](/api/exceptions) when index is out of range
 
 <br><br>
 
@@ -271,7 +271,7 @@ Get current iterator element data
 
 Move to next element and get its data
 
-###### Throws [`IllegalStateException`](/api/exceptions/state) when there is no next element
+###### Throws [`IllegalStateException`](/api/exceptions) when there is no next element
 
 <br><br>
 
@@ -332,9 +332,9 @@ Creates empty instance
 |-----------|----------|----------|---------|-------------------------------|
 | fromIndex | `number` | +        | -       | 0 <= index <= list.length - 1 |
 
-###### Throws: [`CollectionIsEmptyException`](/api/exceptions/state) when list is empty
+###### Throws: [`CollectionIsEmptyException`](/api/exceptions) when list is empty
 
-###### Throws: [`IndexOutOfBoundsException`](/api/exceptions/argument) when index is out of range
+###### Throws: [`IndexOutOfBoundsException`](/api/exceptions) when index is out of range
 
 <br><br>
 
@@ -349,7 +349,7 @@ Get current iterator element data
 
 Move to next element and get its data
 
-###### Throws [`IllegalStateException`](/api/exceptions/state) when there is no next element
+###### Throws [`IllegalStateException`](/api/exceptions) when there is no next element
 
 <br><br>
 
@@ -362,7 +362,7 @@ Check is there next element available
 
 Move to prev element and get its data
 
-###### Throws [`IllegalStateException`](/api/exceptions/state) when there is no prev element
+###### Throws [`IllegalStateException`](/api/exceptions) when there is no prev element
 
 <br><br>
 

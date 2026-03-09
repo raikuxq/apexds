@@ -22,4 +22,4 @@ transposeMatrix(matrix);
 
 ### Throws:
 
-#### [`IllegalAgrumentException`](/api/exceptions/argument) when given array is not a matrix
+#### [`IllegalAgrumentException`](/api/exceptions) when given array is not a matrix

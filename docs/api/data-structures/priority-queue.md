@@ -37,7 +37,7 @@ Adds an element to the queue with a specific priority.
 
 Removes and returns the element with the highest priority (lowest priority number).
 
-###### Throws: [`CollectionIsEmptyException`](/api/exceptions/state) when queue is empty
+###### Throws: [`CollectionIsEmptyException`](/api/exceptions) when queue is empty
 
 <br><br>
 
@@ -45,7 +45,7 @@ Removes and returns the element with the highest priority (lowest priority numbe
 
 Returns the highest priority element without removing it.
 
-###### Throws: [`CollectionIsEmptyException`](/api/exceptions/state) when queue is empty
+###### Throws: [`CollectionIsEmptyException`](/api/exceptions) when queue is empty
 
 <br><br>
 

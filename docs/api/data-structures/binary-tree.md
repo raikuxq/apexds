@@ -18,9 +18,9 @@ Creates empty instance
 
 ###### Params:
 
-| Name      | Type                              | Required | Default                 | Description                                                              |
-|-----------|-----------------------------------|----------|-------------------------|--------------------------------------------------------------------------|
-| fnCompare | [`FnCompareTwo`](/api/types#type) | -        | `(a: T, b: T) => a > b` | Callback function that will be called for comparing LEFT and RIGHT nodes |
+| Name      | Type                               | Required | Default                 | Description                                                              |
+|-----------|------------------------------------|----------|-------------------------|--------------------------------------------------------------------------|
+| fnCompare | [`FnCompareTwo`](/api/types/types) | -        | `(a: T, b: T) => a > b` | Callback function that will be called for comparing LEFT and RIGHT nodes |
 
 <br><br>
 
@@ -34,7 +34,7 @@ Add value to top of tree
 |-------|------|----------|---------|-------------|
 | value | `T`  | +        | -       |             |
 
-###### Throws: [`IsAlreadyExistsException`](/api/exceptions/state)
+###### Throws: [`IsAlreadyExistsException`](/api/exceptions)
 
 <br><br>
 
@@ -54,7 +54,7 @@ Check is tree has given value
 
 Delete value from tree and restructure it
 
-###### Throws: [`IsNotFoundException`](/api/exceptions/state) when node to delete was not found
+###### Throws: [`IsNotFoundException`](/api/exceptions) when node to delete was not found
 
 <br><br>
 
@@ -74,7 +74,7 @@ Copy subtree from given root node
 
 Find maximum value in the tree
 
-###### Throws: [`CollectionIsEmptyException`](/api/exceptions/state) when tree is empty
+###### Throws: [`CollectionIsEmptyException`](/api/exceptions) when tree is empty
 
 <br><br>
 
@@ -82,7 +82,7 @@ Find maximum value in the tree
 
 Find minimum value in the tree
 
-###### Throws: [`CollectionIsEmptyException`](/api/exceptions/state) when tree is empty
+###### Throws: [`CollectionIsEmptyException`](/api/exceptions) when tree is empty
 
 <br><br>
 
@@ -96,7 +96,7 @@ Convert a tree into array by using given traversing method
 |------|------------------------------------------------------------------------|----------|---------|----------------------------|
 | type | [`EnumTreeTraversalType`](/api/types/enumerable#EnumTreeTraversalType) | +        | -       | preorder/inorder/postorder |
 
-###### Throws: [`CollectionIsEmptyException`](/api/exceptions/state) when tree is empty
+###### Throws: [`CollectionIsEmptyException`](/api/exceptions) when tree is empty
 
 <br><br>
 

@@ -5,7 +5,7 @@ Check if graph has a path between two vertices
 ### Import
 
 ```ts
-import {hasPath} from "@apexds/core/lib/exports/algorithms";
+import {hasPath} from "@apexds/core";
 ```
 
 ### API reference
@@ -15,9 +15,9 @@ API: [/api/algorithms/graph/has-path](/api/algorithms/graph/has-path)
 ### Example usage
 
 ```ts
-import {hasPath} from "@apexds/core/lib/exports/algorithms";
-import {Graph} from "@apexds/core/lib/exports/data-structures";
-import {BFSIterationStrategy} from "@apexds/core/lib/exports/algorithms";
+import {hasPath} from "@apexds/core";
+import {Graph} from "@apexds/core";
+import {BFSIterationStrategy} from "@apexds/core";
 
 const graph = new Graph<string>();
 graph.addVertex('A').addVertex('B').addEdge('A', 'B');

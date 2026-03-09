@@ -9,7 +9,7 @@ Read full: [wiki/breadth-first_search](https://en.wikipedia.org/wiki/Breadth-fir
 ### Import
 
 ```ts
-import {GraphIteratorBFS} from "@apexds/core/lib/exports/algorithms";
+import {GraphIteratorBFS} from "@apexds/core";
 ```
 
 ### API reference
@@ -19,8 +19,8 @@ API: [/api/algorithms/graph/iterator-dfs](/api/algorithms/graph/iterator-dfs)
 ### Example usage
 
 ```ts
-import {Graph} from "@apexds/core/lib/exports/data-structures";
-import {GraphIteratorBFS} from "@apexds/core/lib/exports/algorithms";
+import {Graph} from "@apexds/core";
+import {GraphIteratorBFS} from "@apexds/core";
 
 const graph = new Graph<string>();
 const iterator = new GraphIteratorBFS(graph);

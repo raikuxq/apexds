@@ -14,7 +14,7 @@ Read full: [wiki/fibonacci_number](https://en.wikipedia.org/wiki/Fibonacci_numbe
 ### Import
 
 ```ts
-import {fibonacci, memoizedFibonacci} from "@apexds/core/lib/exports/algorithms";
+import {fibonacci, memoizedFibonacci} from "@apexds/core";
 ```
 
 ### API reference
@@ -24,7 +24,7 @@ Fibonacci API: [/api/algorithms/fibonacci](/api/algorithms/fibonacci)
 ### Example usage
 
 ```ts
-import {memoizedFibonacci} from "@apexds/core/lib/exports/algorithms";
+import {memoizedFibonacci} from "@apexds/core";
 
 memoizedFibonacci(6); // 8
 memoizedFibonacci(10); // 55

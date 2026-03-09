@@ -10,7 +10,7 @@ of the weights of its constituent edges is minimized.
 ### Import
 
 ```ts
-import {shortestPath} from "@apexds/core/lib/exports/algorithms";
+import {shortestPath} from "@apexds/core";
 ```
 
 ### API reference
@@ -20,9 +20,9 @@ API: [/api/algorithms/graph/shortest-path](/api/algorithms/graph/shortest-path)
 ### Example usage in weighted graph (Dijkstra)
 
 ```ts
-import {shortestPath} from "@apexds/core/lib/exports/algorithms";
-import {Graph} from "@apexds/core/lib/exports/data-structures";
-import {DijkstraIterationStrategy} from "@apexds/core/lib/exports/algorithms";
+import {shortestPath} from "@apexds/core";
+import {Graph} from "@apexds/core";
+import {DijkstraIterationStrategy} from "@apexds/core";
 
 const graph = new Graph<string>();
 const strategy = new DijkstraIterationStrategy();
@@ -53,9 +53,9 @@ shortestPath(graph, 'A', 'B', strategy); // ["Mika", "Lisa", "James", "Anna"]
 ### Example usage in unweighted graph (BFS)
 
 ```ts
-import {shortestPath} from "@apexds/core/lib/exports/algorithms";
-import {Graph} from "@apexds/core/lib/exports/data-structures";
-import {BFSIterationStrategy} from "@apexds/core/lib/exports/algorithms";
+import {shortestPath} from "@apexds/core";
+import {Graph} from "@apexds/core";
+import {BFSIterationStrategy} from "@apexds/core";
 
 const graph = new Graph<string>();
 const strategy = new BFSIterationStrategy();

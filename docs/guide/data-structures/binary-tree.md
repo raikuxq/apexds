@@ -21,7 +21,7 @@ Read full: [wiki/randomized_bst](https://en.wikipedia.org/wiki/Random_binary_tre
 ## Import
 
 ```ts
-import {BinarySearchTree, RandBinarySearchTree} from "@apexds/core/lib/exports/data-structures";
+import {BinarySearchTree, RandBinarySearchTree} from "@apexds/core";
 ```
 
 ## API reference
@@ -31,8 +31,8 @@ BST API: [/api/data-structures/binary-tree](/api/data-structures/binary-tree)
 ## Example usage
 
 ```ts
-import {BinarySearchTree} from "@apexds/core/lib/exports/data-structures";
-import {EnumTreeTraversalType} from "@apexds/core/lib/exports/types";
+import {BinarySearchTree} from "@apexds/core";
+import {EnumTreeTraversalType} from "@apexds/core";
 
 const tree: IBinaryTree<number> = new BinarySearchTree();
 

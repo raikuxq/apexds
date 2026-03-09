@@ -52,7 +52,7 @@ Create new graph node
 |-------|------|----------|---------|-------------|
 | value | `T`  | +        | -       |             |
 
-###### Throws: [`IsAlreadyExistsException`](/api/exceptions/state) when vertex is already exists
+###### Throws: [`IsAlreadyExistsException`](/api/exceptions) when vertex is already exists
 
 <br><br>
 
@@ -66,7 +66,7 @@ Remove vertex and all related edges
 |-------|------|----------|---------|-------------|
 | value | `T`  | +        | -       |             |
 
-###### Throws: [`IsNotFoundException`](/api/exceptions/state) when vertex to remove was not found
+###### Throws: [`IsNotFoundException`](/api/exceptions) when vertex to remove was not found
 
 <br><br>
 
@@ -98,7 +98,7 @@ Add new edge between two given vertices
 | to     | `T`      | +        | -       | End vertex   |
 | weight | `number` | -        | 0       | Edge weight  |
 
-###### Throws: [`IsNotFoundException`](/api/exceptions/state) when one of vertices was not found
+###### Throws: [`IsNotFoundException`](/api/exceptions) when one of vertices was not found
 
 ::: tip Difference between directed and undirected graphs
 In case of undirected graph, edges A->B and B->A are the same  
@@ -122,7 +122,7 @@ Remove edge between two given vertices
 | from | `T`  | +        | -       | Start vertex |
 | to   | `T`  | +        | -       | End vertex   |
 
-###### Throws: [`IsNotFoundException`](/api/exceptions/state) when edge to remove was not found
+###### Throws: [`IsNotFoundException`](/api/exceptions) when edge to remove was not found
 
 <br><br>
 

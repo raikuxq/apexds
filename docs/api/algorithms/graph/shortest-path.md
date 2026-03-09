@@ -25,8 +25,8 @@ shortestPath(graph, from, to, strategy);
 
 ### Throws:
 
-#### [`IsNotFoundException`](/api/exceptions/state) when start vertex does not exist
+#### [`IsNotFoundException`](/api/exceptions) when start vertex does not exist
 
-#### [`IsNotFoundException`](/api/exceptions/state) when end vertex does not exist
+#### [`IsNotFoundException`](/api/exceptions) when end vertex does not exist
 
-#### [`IllegalStateException`](/api/exceptions/state) when there is no path at all between two vertices
+#### [`IllegalStateException`](/api/exceptions) when there is no path at all between two vertices

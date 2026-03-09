@@ -9,7 +9,7 @@ Read full: [wiki/depth-first_search](https://en.wikipedia.org/wiki/Depth-first_s
 ### Import
 
 ```ts
-import {GraphIteratorDFS} from "@apexds/core/lib/exports/algorithms";
+import {GraphIteratorDFS} from "@apexds/core";
 ```
 
 ### API reference
@@ -19,8 +19,8 @@ API: [/api/algorithms/graph/iterator-dfs](/api/algorithms/graph/iterator-dfs)
 ### Example usage
 
 ```ts
-import {Graph} from "@apexds/core/lib/exports/data-structures";
-import {GraphIteratorDFS} from "@apexds/core/lib/exports/algorithms";
+import {Graph} from "@apexds/core";
+import {GraphIteratorDFS} from "@apexds/core";
 
 const graph = new Graph<string>();
 const iterator = new GraphIteratorDFS(graph);

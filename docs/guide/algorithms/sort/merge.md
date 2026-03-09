@@ -23,7 +23,7 @@ Worst: `O(n)`
 ### Import
 
 ```ts
-import {mergeSort} from "@apexds/core/lib/exports/algorithms";
+import {mergeSort} from "@apexds/core";
 ```
 
 ### API reference
@@ -33,7 +33,7 @@ Sort API: [/api/algorithms/sort/merge](/api/algorithms/sort/merge)
 ### Example usage
 
 ```ts
-import {mergeSort} from "@apexds/core/lib/exports/algorithms";
+import {mergeSort} from "@apexds/core";
 
 mergeSort([-1, 3, -2, 1, 2, 0, -3]); // [-3, -2, -1, 0, 1, 2, 3]
 ```

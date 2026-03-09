@@ -9,7 +9,7 @@ Read full: [wiki/memoization](https://en.wikipedia.org/wiki/Memoization)
 ### Import
 
 ```ts
-import {memoize} from "@apexds/core/lib/exports/algorithms";
+import {memoize} from "@apexds/core";
 
 const memoizedFn = memoize(fn);
 ```

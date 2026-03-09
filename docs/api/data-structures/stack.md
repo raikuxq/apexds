@@ -28,7 +28,7 @@ Creates empty instance
 
 Returns value from top of stack
 
-###### Throws: [`CollectionIsEmptyException`](/api/exceptions/state) when stack is empty
+###### Throws: [`CollectionIsEmptyException`](/api/exceptions) when stack is empty
 
 <br><br>
 
@@ -36,7 +36,7 @@ Returns value from top of stack
 
 Returns value from top of stack and removes it
 
-###### Throws: [`CollectionIsEmptyException`](/api/exceptions/state) when stack is empty
+###### Throws: [`CollectionIsEmptyException`](/api/exceptions) when stack is empty
 
 <br><br>
 
@@ -50,7 +50,7 @@ Add value to top of stack
 |-------|------|----------|---------|-------------|
 | value | `T`  | +        | -       |             |
 
-###### Throws: [`CollectionIsFullException`](/api/exceptions/state) when there is no space available
+###### Throws: [`CollectionIsFullException`](/api/exceptions) when there is no space available
 
 <br><br>
 
