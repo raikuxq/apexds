@@ -1,11 +1,11 @@
 # Navigation
-+ [Linear data structures](#linear-data-structures)
++ [Elementary data structures](#elementary-data-structures)
     + [Stack](#stack)
     + [Queue](#queue)
+    + [Linked list](#linked-list)
     + [PriorityQueue](#priorityqueue)
     + [BinaryHeap](#binaryheap)
-    + [Linked list](#linked-list)
-+ [Non-linear data structures](#non-linear-data-structures)
++ [Complex data structures](#complex-data-structures)
     + [Graph](#graph)
     + [Binary tree](#binary-trees)
 + [Algorithms](#algorithms)
@@ -14,7 +14,7 @@
     + [Sorting algorithms](#sorting-algorithms)
 
 
-# Linear data structures
+# Elementary data structures
 
 ### Interfaces
 [ILinearStorage](src/app/types/ILinearStorage.ts) — Contains common methods of linear data structures.
@@ -80,7 +80,7 @@ Implements [IBiDirectIterable](src/app/types/IBiDirectIterable.ts) interface.
 
 
 
-# Non linear data structures
+# Complex data structures
 
 ## Graph
 ### Interfaces
