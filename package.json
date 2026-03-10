@@ -80,6 +80,6 @@
     "vitepress": "^1.6.4"
   },
   "dependencies": {},
-  "version": "4.2.3",
+  "version": "4.2.4",
   "sideEffects": false
 }
