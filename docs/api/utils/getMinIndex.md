@@ -26,11 +26,11 @@ console.log(minIndex); // Output: 3
 ## Parameters
 
 ### getMinIndex
-- `arr`: Array<number> - The input array to search for the minimum value.
+- `arr`: `Array<number>` - The input array to search for the minimum value.
 
 ### getMinIndexFromIndex
-- `arr`: Array<number> - The input array to search for the minimum value.
-- `fromIndex`: number - The starting index for the search.
+- `arr`: `Array<number>` - The input array to search for the minimum value.
+- `fromIndex`: `number` - The starting index for the search.
 
 ## Returns
 

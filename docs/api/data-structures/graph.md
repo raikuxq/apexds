@@ -1,4 +1,4 @@
-# UndirectedGraph<T> / DirectedGraph<T>
+# UndirectedGraph\<T> / DirectedGraph\<T>
 
 Guide: [/guide/data-structures/graph](/guide/data-structures/graph)
 

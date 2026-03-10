@@ -13,9 +13,9 @@ console.log(array); // Output: [2, 5, 3]
 ```
 
 ## Parameters
-- `arr`: Array<T> - The array containing the elements to swap.
-- `leftIndex`: number - The index of the first element to swap.
-- `rightIndex`: number - The index of the second element to swap.
+- `arr`: `Array<T>` - The array containing the elements to swap.
+- `leftIndex`: `number` - The index of the first element to swap.
+- `rightIndex`: `number` - The index of the second element to swap.
 
 ## Returns
 This function does not return a value (void). It modifies the array in-place.

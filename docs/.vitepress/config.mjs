@@ -49,8 +49,8 @@ export default defineConfig({
               text: "factories",
               collapsed: true,
               items: [
-                { text: "createGraph", link: "/api/algorithms/graph/create-graph" },
-                { text: "createGraphFromMatrix", link: "/api/algorithms/graph/create-graph-from-matrix" }
+                { text: "createGraph", link: "/guide/algorithms/graph/graph-create" },
+                { text: "createGraphFromMatrix", link: "/guide/algorithms/graph/create-graph-from-matrix" }
               ]
             },
             {
@@ -60,33 +60,33 @@ export default defineConfig({
                 { text: "Breadth-First", link: "/guide/algorithms/graph/iterator-bfs" },
                 { text: "Depth-First", link: "/guide/algorithms/graph/iterator-dfs" },
                 { text: "Dijkstra", link: "/guide/algorithms/graph/iterator-dijkstra" },
-                { text: "createGraphIterator", link: "/api/algorithms/graph/create-iterator" }
+                { text: "createGraphIterator", link: "/guide/algorithms/graph/graph-iterator-create" }
               ]
             },
             {
               text: "searching",
               collapsed: true,
               items: [
-                { text: "Has Path", link: "/api/algorithms/graph/has-path" },
-                { text: "Shortest Path", link: "/api/algorithms/graph/shortest-path" }
+                { text: "Has Path", link: "/guide/algorithms/graph/has-path" },
+                { text: "Shortest Path", link: "/guide/algorithms/graph/shortest-path" }
               ]
             },
             {
               text: "presenter",
               collapsed: true,
               items: [
-                { text: "Json", link: "/api/algorithms/graph/presenter-json" },
-                { text: "Graphviz", link: "/api/algorithms/graph/presenter-graphviz" },
-                { text: "Adjacency Lists", link: "/api/algorithms/graph/presenter-adjacency-lists" },
-                { text: "Adjacency Matrix", link: "/api/algorithms/graph/presenter-adjacency-matrix" }
+                { text: "Json", link: "/guide/algorithms/graph/presenter-json" },
+                { text: "Graphviz", link: "/guide/algorithms/graph/presenter-graphviz" },
+                { text: "Adjacency Lists", link: "/guide/algorithms/graph/presenter-adjacency-lists" },
+                { text: "Adjacency Matrix", link: "/guide/algorithms/graph/presenter-adjacency-matrix" }
               ]
             },
             {
               text: "utils",
               collapsed: true,
               items: [
-                { text: "Transpose", link: "/api/algorithms/graph/transpose-directed-graph" },
-                { text: "Topological sort", link: "/api/algorithms/graph/topological-sort" }
+                { text: "Transpose", link: "/guide/algorithms/graph/transpose-directed-graph" },
+                { text: "Topological Sort", link: "/guide/algorithms/graph/topological-sort" }
               ]
             }
           ]
@@ -155,7 +155,6 @@ export default defineConfig({
       "/api": [
         {
           text: "Types Info",
-          collapsed: false,
           items: [
             { text: "Types", link: "/api/types/types" },
             { text: "Interfaces", link: "/api/types/interfaces" },
@@ -168,7 +167,6 @@ export default defineConfig({
         },
         {
           text: "Base data structures",
-          collapsed: false,
           items: [
             { text: "Stack", link: "/api/data-structures/stack" },
             { text: "Queue", link: "/api/data-structures/queue" },
@@ -193,7 +191,7 @@ export default defineConfig({
               text: "factories",
               collapsed: false,
               items: [
-                { text: "createGraph", link: "/api/algorithms/graph/create-graph" },
+                { text: "createGraph", link: "/api/algorithms/graph/graph-create" },
                 { text: "createGraphFromMatrix", link: "/api/algorithms/graph/create-graph-from-matrix" }
               ]
             },
@@ -204,7 +202,7 @@ export default defineConfig({
                 { text: "GraphIteratorBFS", link: "/api/algorithms/graph/iterator-bfs" },
                 { text: "GraphIteratorDFS", link: "/api/algorithms/graph/iterator-dfs" },
                 { text: "GraphIteratorDijkstra", link: "/api/algorithms/graph/iterator-dijkstra" },
-                { text: "createGraphIterator", link: "/api/algorithms/graph/create-iterator" }
+                { text: "createGraphIterator", link: "/api/algorithms/graph/graph-iterator-create" },
               ]
             },
             {
@@ -286,7 +284,6 @@ export default defineConfig({
         },
         {
           text: "Utils",
-          collapsed: false,
           items: [
             { text: "checkIsArrayMatrix", link: "/api/utils/checkIsArrayMatrix" },
             { text: "getMinIndex", link: "/api/utils/getMinIndex" },

@@ -13,7 +13,7 @@ console.log(isValid); // Output: true
 ```
 
 ## Parameters
-- `array`: Array<Array<T>> - The 2D array to validate as a matrix.
+- `array`: `Array<Array<T>>` - The 2D array to validate as a matrix.
 
 ## Returns
 Returns `true` if the array is a valid matrix (all rows have the same length and array is not empty), `false` otherwise.
