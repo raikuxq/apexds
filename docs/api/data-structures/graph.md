@@ -1,4 +1,4 @@
-# UndirectedGraph\<T> / DirectedGraph\<T>
+# UndirectedGraph<T> / DirectedGraph<T>
 
 Guide: [/guide/data-structures/graph](/guide/data-structures/graph)
 
@@ -10,11 +10,23 @@ Guide: [/guide/data-structures/graph](/guide/data-structures/graph)
 
 ### [`IGraph`](/api/types/interfaces#IGraph)
 
+## Properties
+
+### `adjacencyList: ReadonlyMap<T, ReadonlySet<T>>`
+
+Read-only access to the graph's adjacency list as a map of vertices to their neighbors.
+
 ## Methods
 
-### `constructor(): IGraph<T>`
+### `constructor(params?: TGraphConstructorParams<T>): IGraph<T>`
 
-Creates empty instance
+Creates empty instance with optional custom key selector.
+
+###### Params:
+
+| Name   | Type                         | Required | Default | Description                                       |
+|--------|------------------------------|----------|---------|---------------------------------------------------|
+| params | `TGraphConstructorParams<T>` | -        | -       | Optional parameters including custom key selector |
 
 <br><br>
 
@@ -56,20 +68,6 @@ Create new graph node
 
 <br><br>
 
-### `removeVertex(value: T): IGraph<T>`
-
-Remove vertex and all related edges
-
-###### Params:
-
-| Name  | Type | Required | Default | Description |
-|-------|------|----------|---------|-------------|
-| value | `T`  | +        | -       |             |
-
-###### Throws: [`IsNotFoundException`](/api/exceptions) when vertex to remove was not found
-
-<br><br>
-
 ### `hasVertex(value: T): boolean`
 
 Check if graph has given vertex
@@ -82,9 +80,31 @@ Check if graph has given vertex
 
 <br><br>
 
-### `getVertexNeighbors(value: T): Array<T>`
+### `getVertexKey(data: T): string`
 
-Get neighbor vertices of given vertex
+Get the string key representation of a vertex using the key selector function.
+
+###### Params:
+
+| Name | Type | Required | Default | Description                    |
+|------|------|----------|---------|--------------------------------|
+| data | `T`  | +        | -       | The vertex data to get key for |
+
+<br><br>
+
+### `getVertexNeighbors(data: T): Set<T>`
+
+Get the set of neighboring vertices for a given vertex.
+
+###### Params:
+
+| Name | Type | Required | Default | Description                          |
+|------|------|----------|---------|--------------------------------------|
+| data | `T`  | +        | -       | The vertex data to get neighbors for |
+
+###### Throws: [`IsNotFoundException`](/api/exceptions) when vertex is not found
+
+<br><br>
 
 ### `addEdge(from: T, to: T, weight?: number): IGraph<T>`
 
@@ -151,3 +171,17 @@ Get weight of edge between two given vertices
 | to   | `T`  | +        | -       | End vertex   |
 
 <br><br>
+
+<br><br>
+
+### `removeVertex(data: T): IGraph<T>`
+
+Remove a vertex and all its connected edges from the graph.
+
+###### Params:
+
+| Name | Type | Required | Default | Description               |
+|------|------|----------|---------|---------------------------|
+| data | `T`  | +        | -       | The vertex data to remove |
+
+###### Throws: [`IsNotFoundException`](/api/exceptions) when vertex to remove was not found

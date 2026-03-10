@@ -7,6 +7,15 @@ line)
 
 Read full: [wiki/graph](https://en.wikipedia.org/wiki/Graph_(discrete_mathematics))
 
+## Use Cases
+Graphs are used in various applications:
+
+- **Social Networks**: Representing connections between users
+- **Navigation Systems**: Finding shortest paths between locations
+- **Dependency Management**: Resolving dependencies in package managers
+- **Recommendation Systems**: Finding connections between items
+- **Network Topology**: Representing computer networks
+
 ## Graph types
 
 #### Directed graph

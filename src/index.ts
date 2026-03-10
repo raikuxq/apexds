@@ -54,6 +54,7 @@ import { getMinIndex, getMinIndexFromIndex } from "src/app/utils/getMinIndex";
 import { roundNumber } from "src/app/utils/roundNumber";
 import { randomizeNumberInRange } from "src/app/utils/randomizeNumberInRange";
 import { swapArrayItems } from "src/app/utils/swapArrayItems";
+import { checkIsArrayMatrix } from "src/app/utils/checkIsArrayMatrix";
 
 import { EnumGraphType } from "src/app/types/EnumGraphType";
 import { EnumGraphTraversalType } from "src/app/types/EnumGraphTraversalType";
@@ -80,6 +81,7 @@ export {
   roundNumber,
   randomizeNumberInRange,
   swapArrayItems,
+  checkIsArrayMatrix,
 };
 
 export { bubbleSort, insertionSort, mergeSort, selectSort, quickSort };

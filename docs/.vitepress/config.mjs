@@ -26,7 +26,6 @@ export default defineConfig({
         },
         {
           text: "Base data structures",
-          collapsed: false,
           items: [
             { text: "Stack", link: "/guide/data-structures/stack" },
             { text: "Queue", link: "/guide/data-structures/queue" },
@@ -37,14 +36,13 @@ export default defineConfig({
         },
         {
           text: "Graphs",
-          collapsed: false,
           items: [
             {
               text: "graph", link: "/guide/data-structures/graph",
               collapsed: true,
               items: [
-                { text: "DirectedGraph", link: "/guide/data-structures/graph" },
-                { text: "UndirectedGraph", link: "/guide/data-structures/graph" }
+                { text: "DirectedGraph", link: "/guide/data-structures/directed-graph" },
+                { text: "UndirectedGraph", link: "/guide/data-structures/undirected-graph" }
               ]
             },
             {
@@ -95,7 +93,6 @@ export default defineConfig({
         },
         {
           text: "Binary Search Tree",
-          collapsed: false,
           items: [
             {
               text: "unbalanced",
@@ -124,7 +121,6 @@ export default defineConfig({
         },
         {
           text: "Algorithms",
-          collapsed: false,
           items: [
             {
               text: "sorting",
@@ -140,12 +136,11 @@ export default defineConfig({
             { text: "memorize", link: "/guide/algorithms/memoize" },
             { text: "factorial", link: "/guide/algorithms/factorial" },
             { text: "fibonacci", link: "/guide/algorithms/fibonacci" },
-            { text: "transposeMatrix", link: "/guide/algorithms/transpose-matrix" },
+            { text: "transposeMatrix", link: "/guide/algorithms/transpose-matrix" }
           ]
         },
         {
           text: "Types Info",
-          collapsed: false,
           items: [
             { text: "Types", link: "/api/types/types" },
             { text: "Interfaces", link: "/api/types/interfaces" },
@@ -184,7 +179,6 @@ export default defineConfig({
         },
         {
           text: "Graphs",
-          collapsed: false,
           items: [
             {
               text: "graph",
@@ -243,7 +237,6 @@ export default defineConfig({
         },
         {
           text: "Binary Search Tree",
-          collapsed: false,
           items: [
             {
               text: "unbalanced",
@@ -273,7 +266,6 @@ export default defineConfig({
         },
         {
           text: "Algorithms",
-          collapsed: false,
           items: [
             { text: "memorize", link: "/api/algorithms/memoize" },
             { text: "factorial", link: "/api/algorithms/factorial" },
@@ -290,6 +282,17 @@ export default defineConfig({
                 { text: "insertionSort", link: "/api/algorithms/sort/insertion" }
               ]
             }
+          ]
+        },
+        {
+          text: "Utils",
+          collapsed: false,
+          items: [
+            { text: "checkIsArrayMatrix", link: "/api/utils/checkIsArrayMatrix" },
+            { text: "getMinIndex", link: "/api/utils/getMinIndex" },
+            { text: "randomizeNumberInRange", link: "/api/utils/randomizeNumberInRange" },
+            { text: "roundNumber", link: "/api/utils/roundNumber" },
+            { text: "swapArrayItems", link: "/api/utils/swapArrayItems" }
           ]
         }
       ]
